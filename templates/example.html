@@ -1,0 +1,24 @@
+<head>
+    <style> body { margin: 0; padding:0px; } </style>
+    <script src="{{ url_for('static', filename='js/three.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/3d-force-graph.min.js') }}"></script>
+    <script src="//unpkg.com/d3-octree"></script>
+    <script src="//unpkg.com/d3-force-3d"></script>
+  </head>
+  
+  <body>
+    <div id="3d-graph"></div>
+  
+    <script>
+      // Random tree
+      const N = 300;
+      fetch("/data").then(res => res.json())
+                    .then((out) =>{
+        const Graph = ForceGraph3D()
+          (document.getElementById('3d-graph'))
+            .nodeAutoColorBy('group');
+          
+          Graph.graphData(out);
+      })
+    </script>
+  </body>

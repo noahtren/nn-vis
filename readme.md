@@ -1,6 +1,6 @@
 below are some notes to myself about this project, which is a WIP
 
-## Neural Architecture Search and Visualization
+## Neural Architecture Visualization
 I am interested in visualizing different neural architectures. It seems
 that a good starting point for this would be using JavaScript libraries
 to create force directed graphs of neural network wirings.
